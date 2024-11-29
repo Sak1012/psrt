@@ -10,7 +10,10 @@ const people: { id: string; name: string }[] = [
 export default function ProfileList() {
   return (
     <main className="w-full h-screen p-10">
-      <h1 className="text-3xl font-bold mb-5">Profiles</h1>
+      <section className="flex flex-row justify-between">
+        <h1 className="text-3xl font-bold mb-5">Profiles</h1>
+        <h1 className="text-3xl font-bold mb-5">Name of Institute</h1>
+      </section>
       <table className="w-full">
         <thead>
           <tr>
