@@ -1,10 +1,20 @@
-export default function Login(){
-    return(
-        <main className="w-full flex flex-col items-center justify-center p-12 h-screen">
-            <h1 className="font-extrabold text-5xl">Login</h1>
-            <input className="mt-5 w-30 h-10 text-2xl border border-gray-400 rounded px-3 py-2" type="text" id="name" placeholder="User Id"/>
-            <input className="mt-5 w-30 h-10 text-2xl border border-gray-400 rounded font-medium px-3 py-2" type="password" id="name" placeholder="Password"/>
-            <button className="mt-5 w-32 h-10 text-2xl bg-indigo-300 hover:bg-indigo-400 text-black rounded" type="submit">Submit</button>
-        </main>
-    ) 
+export default function Login() {
+  return (
+    <main className="w-full flex flex-col items-center justify-center p-12 h-screen">
+      <h1 className="font-extrabold text-2xl">Please Login to Continue</h1>
+      <input
+        type="text"
+        placeholder="Username"
+        className="w-1/3 h-12 border border-gray-300 rounded-lg p-2.5 mt-5"
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        className="w-1/3 h-12 border border-gray-300 rounded-lg p-2.5 mt-5"
+      />
+      <button className="w-1/3 h-12 bg-blue-500 hover:bg-blue-700 text-white rounded mt-5">
+        Login
+      </button>
+    </main>
+  );
 }
