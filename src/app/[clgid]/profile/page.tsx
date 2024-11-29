@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const people: { id: string; name: string }[] = [
   { id: "dr-sanjeevi", name: "Dr. T. Javaya Sanjeevi" },
@@ -8,6 +9,8 @@ const people: { id: string; name: string }[] = [
 ];
 
 export default function ProfileList() {
+  const pathname = usePathname();
+  const clgid = pathname.split("/")[1];
   return (
     <main className="w-full h-screen p-10">
       <section className="flex flex-row justify-between">
@@ -27,7 +30,7 @@ export default function ProfileList() {
             <tr className="h-16 border-b-2 " key={person.id}>
               <td>
                 <Link
-                  href={`/profile/${person.id}`}
+                  href={`/${clgid}/profile/${person.id}`}
                   className="pl-5 text-blue-500 hover:underline text-lg"
                 >
                   {person.name}
